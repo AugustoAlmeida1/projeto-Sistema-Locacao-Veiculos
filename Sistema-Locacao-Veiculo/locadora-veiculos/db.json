@@ -1,0 +1,21 @@
+{
+    "marcas": [
+        { "id": "1", "nome": "Volkswagen" }
+    ],
+    "categorias": [
+        { "id": "1", "nome": "Economico", "valorLocacao": 120.0 }
+    ],
+    "modelos": [
+        { "id": "1", "nome": "Gol", "ano": 2024, "marcaId": "1", "categoriaId": "1" }
+    ],
+    "veiculos": [
+        { "id": "1", "chassi": "9BWZZZ377VT004251", "placa": "ABC1D23", "anoFabricacao": 2024, "cor": "Prata", "kmRodado": 15000, "modeloId": "1" }
+    ],
+    "manuntencoes": [],
+    "cliente": [],
+    "locacoes": [],
+    "contratos": [],
+    "vistorias": [],
+    "pagamentos": [],
+    "notasFiscais": []
+}
