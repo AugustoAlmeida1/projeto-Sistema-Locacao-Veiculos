@@ -2,7 +2,7 @@
 
 //Propriedades do table
 import type { ReactNode } from "react";
-import { Button } from "./components/Button"
+import { Button } from "../../components/Button"
 
 export interface Column<T> {
   header: string;
@@ -47,8 +47,8 @@ export function Table<T extends { id?: string }>({ columns, data, onEdit, onDele
                 <td>
                   <div className="d-flex flex-wrap gap-1">
                     {acoes && acoes(item)}
-                    {onEdit && <Button label="Editar" variant="warning" size="sm" onClick={() => onEdit(item)} />}
-                    {onDelete && <Button label="Excluir" variant="danger" size="sm" onClick={() => onDelete(item)} />}
+                    {onEdit && <Button label="Editar" variant="warning"  onClick={() => onEdit(item)} />}
+                    {onDelete && <Button label="Excluir" variant="danger"  onClick={() => onDelete(item)} />}
                   </div>
                 </td>
               )}
