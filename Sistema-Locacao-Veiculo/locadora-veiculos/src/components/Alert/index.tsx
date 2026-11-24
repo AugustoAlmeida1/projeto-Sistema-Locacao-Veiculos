@@ -1,15 +1,22 @@
 
+
 //Propriedades do alert
-interface AlertProps {
-    label: string;
-    variant?: 'primary' | 'secondary' | 'Success' | 'danger' | 'warning';
-    type?: 'button' | 'submit' | 'reset';
-    disabled?: boolean;
-    onClick?: () => void; 
+export interface Mensagem {
+  tipo: "success" | "danger" | "warning";
+  texto: string;
 }
 
-export function Button({ label, variant = "primary", type = "button", disabled, onClick}: ButtonProps) {
-    return (
-        <Button type={type} className={`btn btn-${variant}`} disabled={disabled} onClick={onClick}> {label}</Button>
-    );
+interface AlertProps {
+  type: "success" | "danger" | "warning";
+  message: string;
+  onClose?: () => void;
+}
+
+export function Alert({ type, message, onClose }: AlertProps) {
+  return (
+    <div className={`alert alert-${type} d-flex justify-content-between align-items-start`} role="alert">
+      <span>{message}</span>
+      {onClose && <button type="button" className="btn-close" aria-label="Fechar" onClick={onClose} />}
+    </div>
+  );
 }
