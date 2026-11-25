@@ -9,9 +9,10 @@ interface TextAreaProps {
   value: string;
   onChange: (e: ChangeEvent<HTMLTextAreaElement>) => void;
   rows?: number;
+  error?: string;
 }
 
-export function TextArea({ label, name, value, onChange, rows = 3}: TextAreaProps) {
+export function TextArea({ label, name, value, onChange, rows = 3, error}: TextAreaProps) {
   return (
     <div className="mb-3">
       <label htmlFor={name} className="form-label">{label}</label>
@@ -21,7 +22,9 @@ export function TextArea({ label, name, value, onChange, rows = 3}: TextAreaProp
         value={value}
         onChange={onChange}
         rows={rows}
+        className={`form-control${error ? " is-invalid" : ""}`}
       />
+      {error && <div className="invalid-feedback">{error}</div>}
     </div>
   );
 }

@@ -2,7 +2,7 @@
 
 //Propriedades do modal
 import type { ReactNode } from "react";
-import { Button } from "../../components/Button"
+import { Button } from "../Button"
 
 interface ModalProps {
   show: boolean;

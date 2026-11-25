@@ -14,9 +14,12 @@ interface SelectProps {
   value: string;
   options: Opcao[];
   onChange: (e: ChangeEvent<HTMLSelectElement>) => void;
+  placeholder?: string;
+  error?: string;
+  disabled?: boolean;
 }
 
-export function Select({ label, name, value, options, onChange}: SelectProps) {
+export function Select({ label, name, value, options, onChange, placeholder = "Selecione", error, disabled}: SelectProps) {
   return (
     <div className="mb-3">
       <label htmlFor={name} className="form-label">{label}</label>
@@ -25,12 +28,15 @@ export function Select({ label, name, value, options, onChange}: SelectProps) {
         name={name}
         value={value}
         onChange={onChange}
+        disabled={disabled}
+        className={`form-select${error ? " is-invalid" : ""}`}
       >
-        <option value=""></option>
+        <option value="">{placeholder}</option>
         {options.map((o) => (
           <option key={o.value} value={o.value}>{o.label}</option>
         ))}
       </select>
+      {error && <div className="invalid-feedback">{error}</div>}
     </div>
   );
 }

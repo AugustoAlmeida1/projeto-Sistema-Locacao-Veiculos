@@ -2,7 +2,7 @@
 
 //Propriedades do table
 import type { ReactNode } from "react";
-import { Button } from "../../components/Button"
+import { Button } from "../Button"
 
 export interface Column<T> {
   header: string;
