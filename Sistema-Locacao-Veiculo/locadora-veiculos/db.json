@@ -1,39 +1,237 @@
 {
   "marcas": [
-    { "id": "1", "nome": "Volkswagen" },
-    { "id": "2", "nome": "Fiat" },
-    { "id": "3", "nome": "Chevrolet" },
-    { "id": "4", "nome": "Toyota" }
+    {
+      "id": "1",
+      "nome": "Volkswagen"
+    },
+    {
+      "id": "2",
+      "nome": "Fiat"
+    },
+    {
+      "id": "3",
+      "nome": "Chevrolet"
+    },
+    {
+      "id": "4",
+      "nome": "Toyota"
+    },
+    {
+      "nome": "BYD",
+      "id": "PIGgGRV"
+    }
   ],
   "categorias": [
-    { "id": "1", "nome": "Econômico", "valorLocacao": 120.0 },
-    { "id": "2", "nome": "Intermediário", "valorLocacao": 180.0 },
-    { "id": "3", "nome": "SUV", "valorLocacao": 280.0 },
-    { "id": "4", "nome": "Executivo", "valorLocacao": 400.0 }
+    {
+      "id": "1",
+      "nome": "Econômico",
+      "valorLocacao": 120
+    },
+    {
+      "id": "2",
+      "nome": "Intermediário",
+      "valorLocacao": 180
+    },
+    {
+      "id": "3",
+      "nome": "SUV",
+      "valorLocacao": 280
+    },
+    {
+      "id": "4",
+      "nome": "Executivo",
+      "valorLocacao": 400
+    }
   ],
   "modelos": [
-    { "id": "1", "nome": "Gol", "ano": 2024, "marcaId": "1", "categoriaId": "1" },
-    { "id": "2", "nome": "Argo", "ano": 2024, "marcaId": "2", "categoriaId": "1" },
-    { "id": "3", "nome": "Onix Plus", "ano": 2024, "marcaId": "3", "categoriaId": "2" },
-    { "id": "4", "nome": "T-Cross", "ano": 2024, "marcaId": "1", "categoriaId": "3" },
-    { "id": "5", "nome": "Corolla", "ano": 2024, "marcaId": "4", "categoriaId": "4" }
+    {
+      "id": "1",
+      "nome": "Gol",
+      "ano": 2024,
+      "marcaId": "1",
+      "categoriaId": "1"
+    },
+    {
+      "id": "2",
+      "nome": "Argo",
+      "ano": 2024,
+      "marcaId": "2",
+      "categoriaId": "1"
+    },
+    {
+      "id": "3",
+      "nome": "Onix Plus",
+      "ano": 2024,
+      "marcaId": "3",
+      "categoriaId": "2"
+    },
+    {
+      "id": "4",
+      "nome": "T-Cross",
+      "ano": 2024,
+      "marcaId": "1",
+      "categoriaId": "3"
+    },
+    {
+      "id": "5",
+      "nome": "Corolla",
+      "ano": 2024,
+      "marcaId": "4",
+      "categoriaId": "4"
+    }
   ],
   "veiculos": [
-    { "id": "1", "chassi": "9BWZZZ377VT004251", "placa": "ABC1D23", "anoFabricacao": 2024, "cor": "Prata", "kmRodado": 15000, "modeloId": "1" },
-    { "id": "2", "chassi": "9BD195A12N0123456", "placa": "DEF2G34", "anoFabricacao": 2024, "cor": "Branco", "kmRodado": 8200, "modeloId": "2" },
-    { "id": "3", "chassi": "9BGEN69P0RB654321", "placa": "GHI3H45", "anoFabricacao": 2024, "cor": "Preto", "kmRodado": 12500, "modeloId": "3" },
-    { "id": "4", "chassi": "9BWAA45U5PT987654", "placa": "JKL4I56", "anoFabricacao": 2024, "cor": "Cinza", "kmRodado": 5300, "modeloId": "4" },
-    { "id": "5", "chassi": "9BRBF3HE0R0112233", "placa": "MNO5J67", "anoFabricacao": 2024, "cor": "Preto", "kmRodado": 3100, "modeloId": "5" }
+    {
+      "id": "1",
+      "chassi": "9BWZZZ377VT004251",
+      "placa": "ABC1D23",
+      "anoFabricacao": 2024,
+      "cor": "Prata",
+      "kmRodado": 15000,
+      "modeloId": "1"
+    },
+    {
+      "id": "2",
+      "chassi": "9BD195A12N0123456",
+      "placa": "DEF2G34",
+      "anoFabricacao": 2024,
+      "cor": "Branco",
+      "kmRodado": 8200,
+      "modeloId": "2"
+    },
+    {
+      "id": "3",
+      "chassi": "9BGEN69P0RB654321",
+      "placa": "GHI3H45",
+      "anoFabricacao": 2024,
+      "cor": "Preto",
+      "kmRodado": 12500,
+      "modeloId": "3"
+    },
+    {
+      "id": "4",
+      "chassi": "9BWAA45U5PT987654",
+      "placa": "JKL4I56",
+      "anoFabricacao": 2024,
+      "cor": "Cinza",
+      "kmRodado": 5550,
+      "modeloId": "4"
+    },
+    {
+      "id": "5",
+      "chassi": "9BRBF3HE0R0112233",
+      "placa": "MNO5J67",
+      "anoFabricacao": 2024,
+      "cor": "Preto",
+      "kmRodado": 3100,
+      "modeloId": "5"
+    }
   ],
-  "manutencoes": [],
+  "manutencoes": [
+    {
+      "data": "2026-11-26",
+      "descricao": "Usado pelo cliente. Troca de óleo e filtro ar condicionado.",
+      "valor": 400,
+      "veiculoId": "4",
+      "id": 1
+    }
+  ],
   "clientes": [
-    { "id": "1", "nome": "Maria Souza", "cpf": "111.444.777-35", "cnh": "04512345678", "validadeCnh": "2030-05-20", "telefone": "(62) 99999-1111", "email": "maria@email.com", "endereco": "Rua das Flores, 100 - Goiânia/GO" },
-    { "id": "2", "nome": "João Pereira", "cpf": "529.982.247-25", "cnh": "03298765432", "validadeCnh": "2029-11-01", "telefone": "(62) 98888-2222", "email": "joao@email.com", "endereco": "Av. Goiás, 500 - Goiânia/GO" },
-    { "id": "3", "nome": "Carlos Lima (CNH vencida)", "cpf": "390.533.447-05", "cnh": "01122334455", "validadeCnh": "2025-01-10", "telefone": "(62) 97777-3333", "email": "carlos@email.com", "endereco": "Rua 7, 20 - Aparecida de Goiânia/GO" }
+    {
+      "id": "1",
+      "nome": "Maria Souza",
+      "cpf": "111.444.777-35",
+      "cnh": "04512345678",
+      "validadeCnh": "2030-05-20",
+      "telefone": "(62) 99999-1111",
+      "email": "maria@email.com",
+      "endereco": "Rua das Flores, 100 - Goiânia/GO"
+    },
+    {
+      "id": "2",
+      "nome": "João Pereira",
+      "cpf": "529.982.247-25",
+      "cnh": "03298765432",
+      "validadeCnh": "2029-11-01",
+      "telefone": "(62) 98888-2222",
+      "email": "joao@email.com",
+      "endereco": "Av. Goiás, 500 - Goiânia/GO"
+    },
+    {
+      "id": "3",
+      "nome": "Carlos Lima (CNH vencida)",
+      "cpf": "390.533.447-05",
+      "cnh": "01122334455",
+      "validadeCnh": "2025-01-10",
+      "telefone": "(62) 97777-3333",
+      "email": "carlos@email.com",
+      "endereco": "Rua 7, 20 - Aparecida de Goiânia/GO"
+    },
+    {
+      "nome": "Augusto",
+      "cpf": "012.345.678-90",
+      "cnh": "99999999",
+      "validadeCnh": "2030-04-26",
+      "telefone": "(62)98100-0000",
+      "email": "augusto@email.com",
+      "endereco": "Rua 00 Qd.00 Lt.01",
+      "id": "1yCf27m"
+    }
   ],
-  "locacoes": [],
+  "locacoes": [
+    {
+      "dataRetirada": "2026-11-25T16:10",
+      "dataDevolucaoPrevista": "2026-11-28",
+      "kmRetirada": 3100,
+      "valorTotal": 1200,
+      "status": "CANCELADA",
+      "clienteId": "1",
+      "veiculoId": "5",
+      "id": 1
+    },
+    {
+      "dataRetirada": "2026-11-25T16:13",
+      "dataDevolucaoPrevista": "2026-11-28",
+      "kmRetirada": 5300,
+      "valorTotal": 280,
+      "status": "FINALIZADA",
+      "clienteId": "1",
+      "veiculoId": "4",
+      "id": 2,
+      "dataDevolucaoReal": "2026-11-25T16:14",
+      "kmDevolucao": 5550
+    }
+  ],
   "contratos": [],
-  "vistorias": [],
-  "pagamentos": [],
-  "notasFiscais": []
+  "vistorias": [
+    {
+      "tipo": "DEVOLUCAO",
+      "data": "2026-11-25T16:14",
+      "km": 5550,
+      "nivelCombustivel": "3/4",
+      "observacoes": "",
+      "locacaoId": "2",
+      "id": 1
+    }
+  ],
+  "pagamentos": [
+    {
+      "data": "2026-11-25",
+      "valor": 280,
+      "forma": "PIX",
+      "status": "PAGO",
+      "locacaoId": "2",
+      "id": 1
+    }
+  ],
+  "notasFiscais": [
+    {
+      "numero": "000001",
+      "serie": "1",
+      "dataEmissao": "2026-11-25",
+      "valor": 280,
+      "locacaoId": "2",
+      "id": 1
+    }
+  ]
 }
