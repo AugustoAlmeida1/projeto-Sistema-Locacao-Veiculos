@@ -6,6 +6,8 @@ import { Button } from "../../components/Button";
 import { Card } from "../../components/Card";
 import { Input } from "../../components/Input";
 import { Select } from "../../components/Select";
+import { lerCampo } from "../../components/utils";
+import type { CampoChange } from "../../components/utils";
 import type { Modelo } from "../../models/Modelo";
 import { veiculoInicial } from "../../models/Veiculo";
 import type { Veiculo } from "../../models/Veiculo";

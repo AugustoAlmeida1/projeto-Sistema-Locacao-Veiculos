@@ -5,6 +5,8 @@ import { Alert } from "../../components/Alert";
 import { Button } from "../../components/Button";
 import { Card } from "../../components/Card";
 import { Input } from "../../components/Input";
+import { lerCampo } from "../../components/utils";
+import type { CampoChange } from "../../components/utils";
 import { marcaInicial } from "../../models/Marca";
 import type { Marca } from "../../models/Marca";
 import { MSG_ERRO_API } from "../../service/api";

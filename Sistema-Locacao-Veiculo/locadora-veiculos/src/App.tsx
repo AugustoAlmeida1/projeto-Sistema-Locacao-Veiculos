@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
+import { Navbar } from "./components/NavBar";
 import { Home } from "./pages/Home";
 import { MarcaList } from "./pages/marcas/MarcaList";
 import { MarcaForm } from "./pages/marcas/MarcaForm";

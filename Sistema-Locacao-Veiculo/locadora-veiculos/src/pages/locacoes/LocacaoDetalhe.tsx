@@ -3,12 +3,15 @@ import type { FormEvent } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { Alert } from "../../components/Alert";
 import type { Mensagem } from "../../components/Alert";
+import { Badge } from "../../components/Badge";
 import { Button } from "../../components/Button";
 import { Card } from "../../components/Card";
 import { Input } from "../../components/Input";
 import { Select } from "../../components/Select";
 import { Table } from "../../components/Table";
 import type { Column } from "../../components/Table";
+import { formatarData, formatarMoeda, hoje, lerCampo } from "../../components/utils";
+import type { CampoChange } from "../../components/utils";
 import type { Cliente } from "../../models/Cliente";
 import type { Contrato } from "../../models/Contrato";
 import type { Locacao } from "../../models/Locacao";
@@ -191,8 +194,8 @@ export function LocacaoDetalhe() {
                 <p className="fw-semibold">Total pago: {formatarMoeda(totalPago)} de {formatarMoeda(locacao.valorTotal)}</p>
                 <form onSubmit={registrarPagamento} noValidate>
                     <div className="row">
-                        <div className="col-12 col-md-3"><Input label="Data" name="data" type="date" value={pag.data} onChange={handleChange} error={errosPag.data} /></div>
-                        <div className="col-12 col-md-3"><Input label="Valor (R$)" name="valor" type="number" value={pag.valor} onChange={handleChange} error={errosPag.valor} min={0} /></div>
+                        <div className="col-12 col-md-3"><Input label="Data" name="data"  value={pag.data} onChange={handleChange} error={errosPag.data} /></div>
+                        <div className="col-12 col-md-3"><Input label="Valor (R$)" name="valor" type="number" value={pag.valor} onChange={handleChange} error={errosPag.valor} /></div>
                         <div className="col-12 col-md-3"><Select label="Forma" name="forma" value={pag.forma} onChange={handleChange} options={opcoesForma} error={errosPag.forma} /></div>
                         <div className="col-12 col-md-3"><Select label="Status" name="status" value={pag.status} onChange={handleChange} options={opcoesStatusPagamento} error={errosPag.status} /></div>
                     </div>

@@ -7,6 +7,8 @@ import { Card } from "../../components/Card";
 import { Input } from "../../components/Input";
 import { Select } from "../../components/Select";
 import { TextArea } from "../../components/TextArea";
+import { agoraLocal, formatarData, formatarMoeda, hoje, lerCampo } from "../../components/utils";
+import type { CampoChange } from "../../components/utils";
 import type { Categoria } from "../../models/Categoria";
 import type { Cliente } from "../../models/Cliente";
 import { gerarTermos } from "../../models/Contrato";
@@ -145,10 +147,10 @@ export function LocacaoForm() {
                             }))} />
                     </div>
                     <div className="col-12 col-md-6">
-                        <Input label="Data de retirada" name="dataRetirada" type="datetime-local" value={locacao.dataRetirada} onChange={handleChange} error={erros.dataRetirada} />
+                        <Input label="Data de retirada" name="dataRetirada"  value={locacao.dataRetirada} onChange={handleChange} error={erros.dataRetirada} />
                     </div>
                     <div className="col-12 col-md-6">
-                        <Input label="Devolução prevista" name="dataDevolucaoPrevista" type="datetime-local" value={locacao.dataDevolucaoPrevista} onChange={handleChange} error={erros.dataDevolucaoPrevista} />
+                        <Input label="Devolução prevista" name="dataDevolucaoPrevista"  value={locacao.dataDevolucaoPrevista} onChange={handleChange} error={erros.dataDevolucaoPrevista} />
                     </div>
                     <div className="col-12 col-md-6">
                         <Select label="Nível de combustível (vistoria de retirada)" name="nivel" value={nivel}

@@ -7,6 +7,7 @@ import { Card } from "../../components/Card";
 import { Input } from "../../components/Input";
 import { Select } from "../../components/Select";
 import { TextArea } from "../../components/TextArea";
+import { agoraLocal, formatarMoeda } from "../../components/utils";
 import type { Categoria } from "../../models/Categoria";
 import { calcularDiarias, calcularValorLocacao } from "../../models/Locacao";
 import type { Locacao } from "../../models/Locacao";
@@ -98,7 +99,7 @@ export function DevolucaoForm() {
             <form onSubmit={handleSubmit} noValidate>
                 <div className="row">
                     <div className="col-12 col-md-6">
-                        <Input label="Data de devolução real" name="dataReal" type="datetime-local" value={dataReal} onChange={(e) => setDataReal(e.target.value)} error={erros.dataReal} />
+                        <Input label="Data de devolução real" name="dataReal"  value={dataReal} onChange={(e) => setDataReal(e.target.value)} error={erros.dataReal} />
                     </div>
                     <div className="col-12 col-md-6">
                         <Input label={`Km de devolução (retirada: ${locacao?.kmRetirada ?? 0})`} name="km" type="number" value={km} onChange={(e) => setKm(Number(e.target.value))} error={erros.km} />

@@ -5,6 +5,7 @@ import type { Mensagem } from "../../components/Alert";
 import { Button } from "../../components/Button";
 import { Card } from "../../components/Card";
 import { Modal } from "../../components/Modal";
+import { formatarMoeda } from "../../components/utils";
 import { Table } from "../../components/Table";
 import type { Column } from "../../components/Table";
 import type { Categoria } from "../../models/Categoria";

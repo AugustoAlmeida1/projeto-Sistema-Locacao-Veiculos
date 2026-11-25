@@ -2,7 +2,7 @@
 //Propriedades do button
 interface ButtonProps {
     label: string;
-    variant?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning';
+    variant?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info';
     type?: 'button' | 'submit' | 'reset';
     size?: "sm" | "md";
     disabled?: boolean;

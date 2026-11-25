@@ -9,6 +9,7 @@ import { Modal } from "../../components/Modal";
 import { Select } from "../../components/Select";
 import { Table } from "../../components/Table";
 import type { Column } from "../../components/Table";
+import { formatarData, formatarMoeda } from "../../components/utils";
 import type { Manutencao } from "../../models/Manutencao";
 import type { Veiculo } from "../../models/Veiculo";
 import { MSG_ERRO_API } from "../../service/api";

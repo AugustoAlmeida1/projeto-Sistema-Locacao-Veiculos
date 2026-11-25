@@ -5,6 +5,8 @@ import { Alert } from "../../components/Alert";
 import { Button } from "../../components/Button";
 import { Card } from "../../components/Card";
 import { Input } from "../../components/Input";
+import { lerCampo } from "../../components/utils";
+import type { CampoChange } from "../../components/utils";
 import { clienteInicial } from "../../models/Cliente";
 import type { Cliente } from "../../models/Cliente";
 import { MSG_ERRO_API } from "../../service/api";
@@ -57,8 +59,8 @@ export function ClienteForm() {
                     <div className="col-12 col-md-6"><Input label="Nome" name="nome" value={cliente.nome} onChange={handleChange} error={erros.nome} /></div>
                     <div className="col-12 col-md-6"><Input label="CPF" name="cpf" value={cliente.cpf} onChange={handleChange} error={erros.cpf} placeholder="000.000.000-00" /></div>
                     <div className="col-12 col-md-6"><Input label="CNH" name="cnh" value={cliente.cnh} onChange={handleChange} error={erros.cnh} /></div>
-                    <div className="col-12 col-md-6"><Input label="Validade da CNH" name="validadeCnh" type="date" value={cliente.validadeCnh} onChange={handleChange} error={erros.validadeCnh} /></div>
-                    <div className="col-12 col-md-6"><Input label="Telefone" name="telefone" type="tel" value={cliente.telefone} onChange={handleChange} error={erros.telefone} /></div>
+                    <div className="col-12 col-md-6"><Input label="Validade da CNH" name="validadeCnh"  value={cliente.validadeCnh} onChange={handleChange} error={erros.validadeCnh} /></div>
+                    <div className="col-12 col-md-6"><Input label="Telefone" name="telefone"  value={cliente.telefone} onChange={handleChange} error={erros.telefone} /></div>
                     <div className="col-12 col-md-6"><Input label="E-mail" name="email" type="email" value={cliente.email} onChange={handleChange} error={erros.email} /></div>
                 </div>
                 <Input label="Endereço" name="endereco" value={cliente.endereco} onChange={handleChange} error={erros.endereco} />

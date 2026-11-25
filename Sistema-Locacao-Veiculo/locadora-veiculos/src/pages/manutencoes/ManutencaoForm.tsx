@@ -7,6 +7,8 @@ import { Card } from "../../components/Card";
 import { Input } from "../../components/Input";
 import { Select } from "../../components/Select";
 import { TextArea } from "../../components/TextArea";
+import { hoje, lerCampo } from "../../components/utils";
+import type { CampoChange } from "../../components/utils";
 import { manutencaoInicial } from "../../models/Manutencao";
 import type { Manutencao } from "../../models/Manutencao";
 import type { Veiculo } from "../../models/Veiculo";
@@ -56,9 +58,9 @@ export function ManutencaoForm() {
             <form onSubmit={handleSubmit} noValidate>
                 <Select label="Veículo" name="veiculoId" value={manutencao.veiculoId} onChange={handleChange} error={erros.veiculoId}
                     options={veiculos.map((v) => ({ value: v.id ?? "", label: v.placa }))} />
-                <Input label="Data" name="data" type="date" value={manutencao.data} onChange={handleChange} error={erros.data} />
+                <Input label="Data" name="data"  value={manutencao.data} onChange={handleChange} error={erros.data} />
                 <TextArea label="Descrição" name="descricao" value={manutencao.descricao} onChange={handleChange} error={erros.descricao} />
-                <Input label="Valor (R$)" name="valor" type="number" value={manutencao.valor} onChange={handleChange} error={erros.valor} min={0} />
+                <Input label="Valor (R$)" name="valor" type="number" value={manutencao.valor} onChange={handleChange} error={erros.valor} />
                 <div className="d-flex gap-2">
                     <Button label="Salvar" type="submit" variant="success" />
                     <Button label="Cancelar" variant="secondary" onClick={() => navigate("/manutencoes")} />

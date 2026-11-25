@@ -5,6 +5,8 @@ import { Alert } from "../../components/Alert";
 import { Button } from "../../components/Button";
 import { Card } from "../../components/Card";
 import { Input } from "../../components/Input";
+import { lerCampo } from "../../components/utils";
+import type { CampoChange } from "../../components/utils";
 import { categoriaInicial } from "../../models/Categoria";
 import type { Categoria } from "../../models/Categoria";
 import { MSG_ERRO_API } from "../../service/api";
@@ -21,6 +23,10 @@ export function CategoriaForm() {
         if (id) categoriaService.buscarPorId(id).then(setCategoria).catch(() => setErroApi(MSG_ERRO_API));
     }, [id]);
 
+    function handleChange(e: CampoChange) {
+        const { name, valor } = lerCampo(e);
+        setCategoria((p) => ({ ...p, [name]: valor }));
+    }
 
     async function handleSubmit(e: FormEvent) {
         e.preventDefault();
@@ -42,8 +48,8 @@ export function CategoriaForm() {
         <Card title={id ? "Editar categoria" : "Nova categoria"}>
             {erroApi && <Alert type="danger" message={erroApi} />}
             <form onSubmit={handleSubmit} noValidate>
-                <Input label="Nome" name="nome" value={categoria.nome} onChange={onChange} error={erros.nome} />
-                <Input label="Valor da diária (R$)" name="valorLocacao" type="number" value={categoria.valorLocacao} onChange={handleChange} error={erros.valorLocacao} min={0} />
+                <Input label="Nome" name="nome" value={categoria.nome} onChange={handleChange} error={erros.nome} />
+                <Input label="Valor da diária (R$)" name="valorLocacao" type="number" value={categoria.valorLocacao} onChange={handleChange} error={erros.valorLocacao}/>
                 <div className="d-flex gap-2">
                     <Button label="Salvar" type="submit" variant="success" />
                     <Button label="Cancelar" variant="secondary" onClick={() => navigate("/categorias")} />
